@@ -1,8 +1,16 @@
-import _ from 'lodash';
+import { _ } from './common.js';
+
 // import base from './public/base.js';
 // import tool from './public/tool.js';
 import printMe from './print.js';
 import './styles.css';
+console.log(process.env.NODE_ENV)
+console.log(process.env)
+console.log(process)
+if(process.env.NODE_ENV !== 'production') {
+  console.log('Looks like we are in development mode!');
+}
+
 function component() {
   // console.log(base.getVal());
   // console.log(tool.getVal());
@@ -30,3 +38,5 @@ if (module.hot) {
     document.body.appendChild(element);
   })
 }
+
+//http://ju.outofmemory.cn/entry/343762
