@@ -5,7 +5,13 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    app: './src/index.js'
+    app: './src/index.js',
+    page1: './src/page1/index.js',
+  },
+  output: {
+    filename: '[name].bundle-[chunkhash].js',
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/'
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -19,18 +25,15 @@ module.exports = {
         use: ['style-loader', 'css-loader']
       }
     ]
-  },
-  plugins: [
-    new CleanWebpackPlugin(['dist']),
-    new HtmlWebpackPlugin({
-      title: 'Output Management'
-    }),
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
-  ],
-  output: {
-    filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: '/'
   }
+  // ,plugins: [
+  //   // new CleanWebpackPlugin(['dist']),
+  //   // new HtmlWebpackPlugin({
+  //   //   title: 'Output Management',
+  //   //   template: 'index.html',
+  //   //   filename: 'bbb-[hash].html'
+  //   // }),
+  //   // ,new webpack.NamedModulesPlugin()
+  //   // ,new webpack.HotModuleReplacementPlugin()
+  // ]
 };

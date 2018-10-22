@@ -4,7 +4,8 @@
   "description": "",
   "private": true,
   "dependencies": {
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.11",
+    "npm": "^6.4.1"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
@@ -27,6 +28,7 @@
     "start": "webpack-dev-server --open --config webpack.dev.js",
     "server": "node server.js",
     "dev": "node dev-server.js",
+    "build-dev": "webpack --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
