@@ -4,6 +4,8 @@ const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
+  //生产环境，自动启用压缩输出，删除无用代码
+  mode: 'production',
   devtool: 'source-map',
   plugins: [
     new UglifyJSPlugin({
