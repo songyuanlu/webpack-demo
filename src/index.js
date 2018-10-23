@@ -1,5 +1,10 @@
-import _ from 'lodash';
+import { _ } from './common.js';
+import Vue from 'vue';
 import { cube } from './math.js';
+
+new Vue({
+  el: '#bbb'
+})
 
 console.log('index s b d')
 

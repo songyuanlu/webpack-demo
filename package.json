@@ -4,8 +4,8 @@
   "description": "",
   "private": true,
   "dependencies": {
-    "lodash": "^4.17.11",
-    "npm": "^6.4.1"
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
